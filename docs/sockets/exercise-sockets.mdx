@@ -1,0 +1,143 @@
+---
+id: exercise-sockets
+title: Sockets con Kotlin
+sidebar_position: 2
+---
+
+```mdx-code-block
+import BrowserWindow from '@site/src/components/BrowserWindow';
+```
+
+## ¿Qué vamos a hacer?
+
+Se hará una pequeña implementación del uso del sockets utilizando el lenguaje de programación [Kotlin](https://kotlinlang.org/). Se construirán dos aplicaciones: un servidor que estará a la escucha de todas las peticiones que pueda recibir; y un cliente que hará peticiones a dicho servidor.
+
+El funcionamiento de las aplicaciones será muy sencillo. El cliente mandará una cadena de texto al servidor; a continuación, el servidor realizá cierto procesamiento para convertir esa cadena de texto a mayúscula para, finalmente, ser devuelta al cliente que le mandó dicha cadena de texto.
+
+<p align='center'>
+  <img
+    src='/img/sockets/sockets-exercise.png'
+    alt='Comunicación entre hosts y servidor'
+  />
+</p>
+
+## La aplicación cliente
+
+```kotlin title="Client.kt"
+import java.io.PrintWriter
+import java.net.Socket
+import java.util.*
+
+private const val HOST = "localhost"
+
+fun main(args: Array<String>) {
+    val clientSocket = Socket(HOST, PORT)
+
+    clientSocket.use {
+        // Entrada para permitir escribir mensajes por consola.
+        val entrada = Scanner(System.`in`)
+
+        // Mensaje respuesta del servidor.
+        val respuesta = Scanner(clientSocket.getInputStream())
+
+        // Salida para el envío de mensajes hacia el servidor.
+        val salida = PrintWriter(clientSocket.getOutputStream(), true)
+
+        println("Enviar mensaje al servidor: ")
+
+        while (entrada.hasNextLine()) {
+            salida.println(entrada.nextLine())
+
+            println("Respuesta del servidor: ${respuesta.nextLine()}")
+        }
+
+    }
+}
+```
+
+## La aplicación servidor
+
+```kotlin title="UppercaseServer.kt"
+import java.io.PrintWriter
+import java.net.ServerSocket
+import java.util.*
+
+const val PORT = 9000
+
+fun main(args: Array<String>) {
+    val serverSocket = ServerSocket(PORT) // Escuchamos en el puerto 9000.
+
+    serverSocket.use {
+
+        println("Escuchando en el puerto: $PORT")
+
+        while (true) {
+            val client = serverSocket.accept()
+
+            client.use {
+                val entrada = Scanner(client.getInputStream())
+                val salida = PrintWriter(client.getOutputStream(), true)
+
+                println("Información del cliente: $it")
+
+                while (entrada.hasNextLine()) {
+                    // Leemos el mensaje del cliente.
+                    val mensajeCliente = entrada.nextLine()
+
+                    // Convertimos a mayúsculas el mensaje.
+                    val respuesta = mensajeCliente.uppercase()
+
+                    println("Enviando la respuesta: $respuesta")
+
+                    // Enviamos la respuesta al cliente.
+                    salida.println(respuesta)
+                }
+
+            }
+        }
+
+    }
+}
+```
+
+## Resultados
+
+### Cliente
+
+````mdx-code-block
+<BrowserWindow>
+
+```shell
+Enviar mensaje al servidor:
+Hola
+Respuesta del servidor: HOLA
+Este es un mensaje para el servidor
+Respuesta para el servidor: ESTE ES UN MENSAJE PARA EL SERVIDOR
+```
+</BrowserWindow>
+````
+
+En primer lugar, el cliente envía la palabra `Hola` al servidor; el servidor responde con la palabra `HOLA`, que es justo el resultado que se esperaba. Este procedimiento vuelve a repetirse, pero esta vez con la frase `Este es un mensaje para el servidor`, a lo que el servidor responde con el texto `ESTE ES UN MENSAJE PARA EL SERVIDOR`.
+
+### Servidor
+
+````mdx-code-block
+<BrowserWindow>
+
+```shell
+Escuchando en el puerto: 9000
+Información del cliente: Socket[addr=/127.0.0.1,port=53916,localport=9000]
+Enviando la respuesta: HOLA
+Enviando la respuesta: ESTA ES UNA FRASE PARA EL SERVIDOR
+```
+
+</BrowserWindow>
+````
+
+Por el lado del servidor, las cosas son un poco diferentes. Primeramente, se acepta la conexión del cliente. Por la dirección de host `127.0.0.1` (localhost) se trata de una aplicación que se está ejecutando en la misma computadora en la que se ejecuta el servidor; además, se observa que el número de puerto que el sistema operativo decidió asignarle al cliente es el `53916`.
+
+Una vez que el servidor acepta la conexión, recibe el mensaje `Hola`, lo convierte a mayúscula y se lo envía al cliente como `HOLA`. Este operación se vuelve a repetir para el mensaje `Este es un mensaje para el servidor`, por lo que el servidor la renvía como `ESTE ES UN MENSAJE PARA EL SERVIDOR`.
+
+## Anexos
+
+[Código fuente de ambas aplicaciones](#)
