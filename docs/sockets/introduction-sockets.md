@@ -9,7 +9,7 @@ sidebar_position: 1
 > Un socket es un "endpoint" o "punto final" de una comunicación bidireccional entre dos programas que están corriendo en la red. Cada socket está vinculado a un número de puerto para que la capa TCP pueda identificar la aplicación a la que están destinados los datos. Para que dos aplicaciones se puedan comunicar, es necesaria una dirección formada por la combinación de una dirección IP y un número de puerto.
 
 <p align="center">
-  <img src="/img/sockets/sockets_example.png" alt="Comunicación entre hosts y servidor"/>
+  <img src="./img/sockets/sockets_example.png" alt="Comunicación entre hosts y servidor"/>
 </p>
 
 Los sockets permiten implementar arquitecturas **cliente-servidor** o **peer-to-peer**. En este tipo de arquitecturas la comunicación es iniciada por una aplicación llamada **cliente**, aquella que envía peticiones y espera una respuesta. En contraparte, existe una segunda aplicación que siempre se encuentra a la escucha, esperando a que un cliente realice una petición para darle una respuesta; esta aplicación es conocida como **servidor**.

@@ -9,7 +9,7 @@ sidebar_position: 2
 > IPsec es un grupo de protocolos que se utilizan juntos para configurar conexiones encriptadas entre dispositivos. Ayuda a mantener seguros los datos enviados a través de redes públicas. IPsec se usa a menudo para configurar VPNs y funciona encriptando paquetes IP, junto con la autenticación de la fuente de donde provienen los paquetes.
 
 <p align="center">
-  <img src="/img/communication_security/ipsec.png" alt="IPSec"/>
+  <img src="./img/communication_security/ipsec.png" alt="IPSec"/>
 </p>
 
 Además, IPSec provee servicios de autenticación, confidencialidad, integridad y no repudio. Gracias a estos servicios, la seguridad de las comunicaciones está garantizadas. Por supuesto, también se tiene el control de acceso, calidad de servicio y registro de actividad.
