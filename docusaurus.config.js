@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'RySC',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  title: 'Redes y seguridad de computadoras',
+  tagline: 'Proyecto integrador',
+  url: 'https://HikingCarrot7.github.io',
+  baseUrl: '/proyecto-seguridad-redes/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'HikingCarrot7', // Usually your GitHub org/user name.
+  projectName: 'proyecto-seguridad-redes', // Usually your repo name.
 
   presets: [
     [
@@ -38,10 +38,10 @@ const config = {
         title: 'RySC',
         logo: {
           alt: 'RySC Logo',
-          src: 'img/misc/internet.png',
+          src: '/img/misc/internet.png',
         },
         items: [
-          { to: '/about', label: 'Autores', position: 'right' },
+          { to: '/authors', label: 'Autores', position: 'right' },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'Código fuente',
