@@ -6,4 +6,4 @@ title: Authors
 
 **Ricardo Nicolás Canul Ibarra** es la persona detrás de este sitio web.
 
-> Este proyecto fue construido con la ayuda de la herramienta [Docusaurios](https://docusaurus.io/).
+> Este proyecto fue construido con ayuda de la herramienta [Docusaurios](https://docusaurus.io/).

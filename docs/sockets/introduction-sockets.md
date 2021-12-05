@@ -8,9 +8,7 @@ sidebar_position: 1
 
 > Un socket es un "endpoint" o "punto final" de una comunicación bidireccional entre dos programas que están corriendo en la red. Cada socket está vinculado a un número de puerto para que la capa TCP pueda identificar la aplicación a la que están destinados los datos. Para que dos aplicaciones se puedan comunicar, es necesaria una dirección formada por la combinación de una dirección IP y un número de puerto.
 
-<p align="center">
-  <img src="./img/sockets/sockets_example.png" alt="Comunicación entre hosts y servidor"/>
-</p>
+![Comunicación entre hosts y servidor](/img/sockets/sockets_example.png)
 
 Los sockets permiten implementar arquitecturas **cliente-servidor** o **peer-to-peer**. En este tipo de arquitecturas la comunicación es iniciada por una aplicación llamada **cliente**, aquella que envía peticiones y espera una respuesta. En contraparte, existe una segunda aplicación que siempre se encuentra a la escucha, esperando a que un cliente realice una petición para darle una respuesta; esta aplicación es conocida como **servidor**.
 
@@ -28,13 +26,7 @@ Un socket consiste en tres elementos:
 
 - **Socket de datagramas (Datagram socket)**: Tipo de socket asociado al protocolo **UDP**, e indica que los datos viajan en datagramas. En contraste con el con el tipo de socket anterior, en este tipo de comunicaciones no se requieren servicios de recuperación y verificación de errores.
 
-## Protocolos
-
-Para que se pueda existir la comunicación entre los dos extremos de una conexión, es necesario un protocolo de comunicaciones que permita el intercambio de información. Existen dos protocolos básicos que son mayormente utilizados para lograr tal fin: **TCP** y **UDP**. Cabe resaltar que ambos protocolos operan en la capa de transporte y tienen el objetivo de comunicar a dos aplicaciones ejecutándose en computadoras diferentes a través de una red.
-
-- **TCP (Protocolo de control de transmisión)**: Es un protocolo orientado a la conexión, es decir, garantiza que exista una conexión adecuada antes de que pueda comenzar una comunicación entre los dispositivos. Además, este protocolo garantiza que la transmisión de todos los paquetes de datos sin errores ni omisiones; asimismo, garantiza que cada paquete llegará a su destino en el mismo orden en que se ha transmitido.
-
-- **UDP (Protocolo de datagramas de usuario)**: Es un protocolo sin conexión que no se preocupa por una conexión adecuada, lo que lo hace rápido pero menos confiable. La mayoría de las comunicaciones en tiempo real y VoIP se realizan a través de UDP.
+En las siguiente sessión se habla de manera más detallada del protocolo TCP y UDP.
 
 ## Referencias
 
