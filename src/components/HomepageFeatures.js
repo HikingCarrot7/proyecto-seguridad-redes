@@ -52,7 +52,7 @@ const TopicList = [
 
 const Topic = ({ Svg, title, description, to }) => {
   return (
-    <div className={clsx('col col--4 topic')} style={{ cursor: 'pointer' }}>
+    <div className={clsx('col col--3 topic')} style={{ cursor: 'pointer' }}>
       <Link {...{ to }} style={{ color: 'black' }}>
         <div className='text--center'>
           <Svg className={styles.featureSvg} alt={title} />
