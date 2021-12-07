@@ -7,46 +7,38 @@ const TopicList = [
   {
     title: 'Programación con sockets',
     to: '/docs/sockets/introduction-sockets',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('../../static/img/home/socket.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        ¿Cómo se comunican programas de software escritos en diferentes de
+        programación?
       </>
     ),
   },
   {
     title: 'Seguridad en la comunicación dentro una red',
     to: '/docs/communication-security/intro',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('../../static/img/home/communication_security.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Conozca la importancia de la seguridad en la comunicación dentro de una
+        red.
       </>
     ),
   },
   {
     title: 'Seguridad en la web',
     to: '/docs/web-security/introduction-https',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('../../static/img/home/web_security.svg').default,
     description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
+      <>Conozca la importa de visitar páginas seguras en internet.</>
     ),
   },
   {
     title: 'Internet of things',
     to: '/docs/iot/exploring-iot',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    Svg: require('../../static/img/home/iot.svg').default,
+    description: <>¿Qué es IoT y por qué es tan popular actualmente?</>,
   },
 ];
 
