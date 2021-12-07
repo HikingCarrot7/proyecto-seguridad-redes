@@ -43,7 +43,7 @@ const config = {
         items: [
           { to: '/authors', label: 'Autores', position: 'right' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/HikingCarrot7/proyecto-seguridad-redes',
             label: 'Código fuente',
             position: 'right',
           },
