@@ -10,8 +10,8 @@ const TopicList = [
     Svg: require('../../static/img/home/socket.svg').default,
     description: (
       <>
-        ¿Cómo se comunican programas de software escritos en diferentes de
-        programación?
+        ¿Cómo se comunican programas de software escritos en diferentes
+        lenguajes de programación?
       </>
     ),
   },

@@ -30,7 +30,7 @@ Además, IPSec provee servicios de autenticación, confidencialidad, integridad 
 
 - **Encapsulating Security Protocol** (ESP): Este protocolo encripta el encabezado IP y el payload de cada paquete. ESP agrega su propio encabezado y un tráiler a cada paquete de datos.
 
-- **Security Association** (SA): Es el paquete de algoritmos y parámetros (tales como las claves) que se utilizan para cifrar y autenticar un flujo de datos particular en una dirección. Uno de los protocolos SA más comunes es el Internet Key Exchange (IKE), que es el encargado de generar las llaves de cifrado y autenticación que serán usadas por IPSec.
+- **Security Association** (SA): Es el paquete de algoritmos y parámetros (tales como las claves) que se utilizan para cifrar y autenticar un flujo de datos particular en una dirección. Uno de los protocolos SA más comunes es el [Internet Key Exchange](https://en.wikipedia.org/wiki/Internet_Key_Exchange) (IKE), que es el encargado de generar las llaves de cifrado y autenticación que serán usadas por IPSec.
 
 ## Referencias
 

@@ -12,4 +12,4 @@ Actualmente, las instituciones gubernamentales, las empresas y las personas depe
 
 Defenderse contra la interceptación de mensajes en la comunicación es uno de los primeros pasos para protegerse en el ciberespacio. Las organizaciones e individuos deben adoptar medidas y controles para denegar a personas no autorizadas información derivada de las telecomunicaciones y para asegurar la autenticidad de dichas telecomunicaciones.
 
-En las siguientes páginas se hablará de una forma para mantener la privacidad de los datos cuando se realizan comunicaciones en una red. En particular, la importancia del protocolo **IPSec** y su relación con las **VPN**.
+En las siguientes secciones se hablará de una forma para mantener la privacidad de los datos cuando se realizan comunicaciones en una red. En particular, la importancia del protocolo **IPSec** y su relación con las **VPN**.

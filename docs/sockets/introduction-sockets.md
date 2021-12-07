@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Definición
 
-> Un socket es un "endpoint" o "punto final" de una comunicación bidireccional entre dos programas que están corriendo en la red. Cada socket está vinculado a un número de puerto para que la capa TCP pueda identificar la aplicación a la que están destinados los datos. Para que dos aplicaciones se puedan comunicar, es necesaria una dirección formada por la combinación de una dirección IP y un número de puerto.
+> Un socket es un "endpoint" o "punto final" de una comunicación bidireccional entre dos programas que están corriendo en la red. Cada socket está vinculado a un número de puerto, para que la capa TCP pueda identificar la aplicación a la que están destinados los datos. Para que dos aplicaciones se puedan comunicar, es necesaria una dirección formada por la combinación de una dirección IP y un número de puerto.
 
 ![Comunicación entre hosts y servidor](/img/sockets/sockets_example.png)
 

@@ -10,11 +10,11 @@ sidebar_position: 1
 
 ![SSL](/img/web-security/ssl.png)
 
-Actualmente, se utiliza el protocolo TLS (Transport Layer Security) por tratarse de una versión actualizada y más segura de SSL. Aunque aún se siguen utilizando las siglas SSL para denominar los certificados de seguridad, debido a que, sigue siendo el término más utilizado.
+Actualmente, se utiliza el protocolo **TLS** (Transport Layer Security) por tratarse de una versión actualizada y más segura de SSL. Aunque aún se siguen utilizando las siglas SSL para denominar los certificados de seguridad, debido a que, sigue siendo el término más utilizado.
 
 ## ¿Por qué es importante el protocolo TLS?
 
-El cifrado TLS ayuda a proteger las aplicaciones web de violaciones de datos y otros ataques. TLS está implementado para ayudar a proteger la privacidad y la seguridad del usuario. Sin TLS, la información confidencial transferida a través de Internet, como las credenciales de inicio de sesión, la información personal y los números de tarjetas de crédito, son vulnerables al robo. Además, HTTPS protegido por TLS se está convirtiendo rápidamente en una práctica estándar para los sitios web.
+El cifrado TLS ayuda a proteger las aplicaciones web de violaciones de datos y otros ataques. TLS está implementado para ayudar a proteger la privacidad y la seguridad del usuario. Sin TLS, la información confidencial transferida a través de internet, como las credenciales de inicio de sesión, la información personal y los números de tarjetas de crédito, son vulnerables al robo. Además, HTTPS protegido por TLS se está convirtiendo rápidamente en una práctica estándar para los sitios web.
 
 ## ¿Cómo funciona TLS?
 
